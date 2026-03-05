@@ -1,133 +1,129 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
 }
 
-body {
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    background: #f4f4f4;
-    color: #222;
+body{
+background:linear-gradient(135deg,#667eea,#764ba2);
+color:white;
 }
 
-/* LAYOUT */
-.layout {
-    display: flex;
-    min-height: 100vh;
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
 }
 
-/* SIDEBAR */
-.sidebar {
-    width: 280px;
-    background: #111;
-    color: white;
-    padding: 40px 20px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    height: 100vh;
+nav ul{
+display:flex;
+list-style:none;
 }
 
-.profile-img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    object-fit: cover;
+nav ul li{
+margin-left:25px;
 }
 
-.role {
-    font-size: 14px;
-    color: #bbb;
-    margin-bottom: 30px;
+nav ul li a{
+color:white;
+text-decoration:none;
+font-weight:bold;
 }
 
-.menu a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    margin: 15px 0;
-    font-size: 14px;
-    transition: 0.3s;
+/* HERO */
+
+.hero{
+height:80vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
 }
 
-.menu a:hover {
-    color: #00bfff;
+.hero h1{
+font-size:50px;
 }
 
-/* CONTENT */
-.content {
-    flex: 1;
-    padding: 60px;
+.hero span{
+color:#ffd369;
 }
 
-section {
-    margin-bottom: 60px;
+.hero p{
+margin:15px 0;
+font-size:18px;
 }
 
-section h2 {
-    margin-bottom: 30px;
-    font-size: 24px;
+button{
+padding:10px 25px;
+border:none;
+background:#ffd369;
+color:black;
+font-weight:bold;
+cursor:pointer;
+border-radius:20px;
 }
 
-/* GRID */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 25px;
+/* ABOUT */
+
+.about{
+padding:80px 20%;
+text-align:center;
 }
 
-/* CARD */
-.card {
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    transition: 0.3s ease;
+.about p{
+margin-top:20px;
+line-height:1.6;
 }
 
-.card:hover {
-    transform: translateY(-8px);
+/* PROJECTS */
+
+.projects{
+padding:80px 10%;
+text-align:center;
 }
 
-.card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
+.project-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:40px;
 }
 
-.card-body {
-    padding: 20px;
+/* GLASS CARD */
+
+.project-card{
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(10px);
+border-radius:15px;
+padding:20px;
+transition:0.4s;
 }
 
-.card-body h3 {
-    margin-bottom: 10px;
-    font-size: 16px;
+.project-card:hover{
+transform:translateY(-10px);
 }
 
-.card-body p {
-    font-size: 14px;
-    color: #666;
+.project-card img{
+width:100%;
+border-radius:10px;
+margin-bottom:15px;
 }
 
 /* CONTACT */
-#contact p {
-    margin-bottom: 10px;
+
+.contact{
+padding:80px;
+text-align:center;
 }
 
-/* RESPONSIVE */
-@media(max-width: 900px) {
-    .layout {
-        flex-direction: column;
-    }
+/* FOOTER */
 
-    .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-    }
-
-    .content {
-        padding: 30px;
-    }
+footer{
+text-align:center;
+padding:20px;
+background:rgba(0,0,0,0.2);
 }
